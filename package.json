@@ -22,7 +22,8 @@
     "lib",
     "docs",
     "LICENSE.md",
-    "README.md"
+    "README.md",
+    "src"
   ],
   "license": "MIT",
   "dependencies": {
