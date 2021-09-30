@@ -896,7 +896,8 @@ var JiraApi = /*#__PURE__*/function () {
      */
 
     /** Get all users in group on Jira
-     * @name getUsersInGroup
+     * @name 
+     sInGroup
      * @function
      * @param {string} groupname - A query string used to search users in group
      * @param {integer} [startAt=0] - The index of the first user to return (0-based)
@@ -936,17 +937,17 @@ var JiraApi = /*#__PURE__*/function () {
      * [Jira Doc](https://developer.atlassian.com/cloud/jira/platform/rest/v3/#api-rest-api-3-user-get)
      * @name getUser
      * @function
-     * @param {string} accountId - The accountId of user to search for
+     * @param {string} key - The key of user to search for
      * @param {string} expand - The expand for additional info (groups,applicationRoles)
      */
 
   }, {
     key: "getUser",
-    value: function getUser(accountId, expand) {
+    value: function getUser(key, expand) {
       return this.doRequest(this.makeRequestHeader(this.makeUri({
         pathname: '/user',
         query: {
-          accountId: accountId,
+          key: key,
           expand: expand
         }
       })));
