@@ -32,7 +32,7 @@
     "request-promise": "^4.1.1"
   },
   "scripts": {
-    "build": "rm -rf lib && babel src --out-dir lib",
+    "build": "rm -rf lib && mkdir lib && cp -R ./src/* ./lib",
     "docs-build": "rm -rf docs && esdoc -c esdoc.json",
     "lint": "eslint ./",
     "test": "npm run lint && mocha --require @babel/register && npm run docs-build",
